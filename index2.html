@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pick a card</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<!--     <link rel="stylesheet" href="/style.css"> -->
+    
+<!--     <script src="/script.js" defer></script> -->
+    
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 10vw 30vw 10vw;
+        grid-gap: 1em;
+      }
+
+      header,
+      footer {
+        grid-column: 1 / span 5;
+      }
+
+      main {
+/*         grid-column: 1 / span 2; */
+        grid-column: span 2;
+      }
+
+      aside {
+        grid-column: span 2;
+      }
+      
+      header,
+      main,
+      aside,
+      footer {
+        background: #eaeaea;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      header,
+      footer {
+        height: 10vw;;
+      }
+      
+
+      
+      .card-front{
+        width: 40%;
+        height: 90%;
+        background-color: red;
+      }
+      .card-front{
+        width: 40%;
+        height: 90%;
+        background-color: blue;
+      }
+
+      @media (max-width: 700px) {
+
+        main,
+        aside {
+          grid-column: 1 / span 5;
+        }
+
+      }
+
+      /* Demo Specific Styles */
+/*       body {
+        margin: 0 auto;
+        max-width: 56em;
+        padding: 1em 0;
+      } */
+
+
+      
+    </style>
+  </head>  
+  <body>
+    <header>
+      Header
+    </header>
+    <main>
+      <div class="card-front"></div>
+      <div class="card-back"></div>
+    </main>
+    <main>
+      <div class="card-front"></div>
+      <div class="card-back"></div>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

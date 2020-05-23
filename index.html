@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pick a card</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      
+      .cards{        
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-top: 20px;
+
+      }
+      
+      .cards p{
+        text-align: center;
+        margin-top: 30%;
+        overflow-wrap:break-word: 
+      }
+      
+      .flip-card-back{
+        font-size: 19px;
+      }
+      
+      .flip-card-container {
+        width: 200px;
+        height: 300px;
+        margin: 10px;
+        
+      }
+      .flip-card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+      }
+
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.5rem;
+        
+
+      }
+      .flip-card-front {
+        background-color: #333;
+        color: #fff;
+      }
+      .flip-card-back {
+        background-color: #517fa4;
+        color: #fff;
+        transform: rotateY(180deg);
+      }
+
+      .flip-card-back p span {
+        display: block;
+        font-size: 1rem;
+        font-style: italic;
+        font-weight: bold;
+        margin-top: 1.25rem;
+      }
+    
+      tech{
+        align-items: center;
+        text-align: center;
+      }
+
+      
+      tech h1{
+        margin-top: 180px;
+        color: #373737;
+        font-size: 22px;
+      }
+      
+      tech h2{
+        color: #373737;
+        font-size: 16px;
+      }
+      
+      
+      .technologies{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+      }
+      
+      .technologies p{
+        overflow-wrap:break-word;
+        text-align: left;
+        padding: 6px;
+        color: #373737;
+        font-size: 14px;
+      }
+      
+      .info-card{
+        position: relative;
+        width: 300px;
+        heigth: 400px;
+        margin:10px;
+      }
+
+    </style>
+  </head>  
+  <body>
+
+    <div class = "cards">
+     <div class="flip-card-container">
+        <div id="flip1" class="flip-card">
+          <div class="flip-card-front">
+            <p>TECHNOLOGY</p>
+          </div>
+          <div class="flip-card-back">
+            <p>TECHNOLOGY</p>
+            <p id="inner-text">
+            </p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="flip-card-container">
+        <div id="flip2" class="flip-card">
+          <div class="flip-card-front">
+            <p>CONTEXT</p>
+          </div>
+          <div class="flip-card-back">
+            <p>CONTEXT</p>
+            <p id="inner-text2">
+            </p>
+          </div>
+        </div>
+      </div>  
+      <div class="flip-card-container">
+        <div id="flip3" class="flip-card">
+          <div class="flip-card-front">
+            <p>MEDIA</p>
+          </div>
+          <div class="flip-card-back">
+            <p>
+              MEDIA
+            </p>
+            <p id="inner-text3">
+            </p>
+          </div>
+        </div>
+      </div>   
+      
+  </div>
+    
+    
+    <tech>
+
+      <h1>
+        TECHNOLOGY DESCRIPTIONS
+      </h1>  
+      
+      
+      
+    
+        <div class="technologies">
+          
+          
+                    <div class = "info-card">
+            <h2>AMBIENT INTELLIGENCE</h2>
+            <p>
+              Electronic environments that are sensitive and responsive to the 
+              presence of people. Ambient intelligence would allow devices in our 
+              environments to support people in carrying out their everyday 
+              life activities and tasks, using information and intelligence that is 
+              hidden in the network connecting these devices.
+            </p>
+          </div>
+          
+          <div class = "info-card">
+            <h2>BEAM-POWERED PROPULSION</h2>
+            <p>
+              Energy that vehicles need to move is beamed to them. This means 
+              they do not need to carry that energy, making them lighter and faster. 
+              This has potential for space craft to go further into space.
+
+            </p>
+          </div>   
+
+<!--           <div class = "info-card">
+            <h2>DE-EXTINCTION</h2>
+            <p>
+              The process of generating an organism that is either an 
+              extinct species or resembles an extinct species. 
+            </p>
+          </div> -->
+          
+          <div class = "info-card">
+            <h2>DNA DATA STORAGE</h2>
+            <p>
+              DNA can accurately store massive amounts of data at a density far 
+              exceeding that of electronic devices. All the world’s current 
+              storage needs for a year could be well met by a cube of DNA measuring 
+              about one meter on a side.
+            </p>
+          </div>
+          
+          <div class = "info-card">
+            <h2>GESTURE RECOGNITION</h2>
+            <p>
+              Gesture recognition can be seen as a way for computers to begin to understand 
+              human body language. It is the interpretation of the motion of a human user by 
+              a computing or electronic device. 
+            </p>
+          </div>
+          
+          <div class = "info-card">
+            <h2>HUMAN AUGMENTATION</h2>
+            <p>
+              A field of research that aims to enhance human abilities through medicine 
+              or technology. These can enhance physical or mental capabilities.
+            </p>
+          </div>
+          
+<!--           <div class = "info-card">
+            <h2>QUANTUM COMPUTING</h2>
+            <p>
+              Most computers process 0 and 1’s, bit’s a bit 
+              can be either 0 or 1, on or off. In quantum computing they 
+              process QBits, which can be 0 or 1 or or both simultaneously.
+            </p>
+          </div> -->
+          
+          <div class = "info-card">
+            <h2>SWARM ROBOTICS</h2>
+            <p>
+              The ability of robots to collectively explore, communicate and perform 
+              complex alterations as a group. 
+            </p>
+          </div>
+        
+<!--           <div class = "info-card">
+            <h2>AMBIENT INTELLIGENCE</h2>
+            <p>
+              Electronic environments that are sensitive and responsive to the 
+              presence of people. Ambient intelligence would allow devices to in our 
+              environments to support people in carrying out their everyday 
+              life activities and tasks, using information and intelligence that is 
+              hidden in the network connecting these devices. 
+            </p>
+          </div> -->
+
+        </div>        
+ 
+
+    </tech>
+    
+
+     
+    <script>
+      
+      var techArray;
+      var contextArray;
+      var mediaArray;
+      
+      
+      var toggle1 = 0;
+      var toggle2 = 0;
+      var toggle3 = 0;
+      
+      
+            
+      var flips = document.getElementById('flip1');
+      var paragraphText1 = document.getElementById('inner-text');
+      
+      var flips2 = document.getElementById('flip2');
+      var paragraphText2 = document.getElementById('inner-text2');
+      
+      var flips3 = document.getElementById('flip3');
+      var paragraphText3 = document.getElementById('inner-text3');
+
+      flips.addEventListener( 'click', function( event ) {
+        toggle1 = toggle(toggle1, this, paragraphText1, techArray);
+
+      });
+      
+      flips2.addEventListener( 'click', function( event ) {
+        toggle2 = toggle(toggle2, this, paragraphText2, contextArray);
+
+      });
+      
+      flips3.addEventListener( 'click', function( event ) {
+        toggle3 = toggle(toggle3, this, paragraphText3, mediaArray);
+      });
+      
+      function toggle(toggleCounter, element, paragraphText, textArray){
+        
+        if (toggleCounter === 0){
+          
+          const randomText = textArray[Math.floor(Math.random() * textArray.length)];
+          element.style.transform = 'rotateY(180deg)';
+          paragraphText.innerHTML = randomText;
+          toggleCounter = 1;
+        } else {
+          element.style.transform = 'rotateY(0deg)';
+          toggleCounter = 0;
+        }
+        return(toggleCounter);
+      }
+      
+
+      techArray = ["DNA Data Storage", 
+                  "Human Augmentation", "Beam-powered propulsion", 
+                  "Swarm Computing", "Gesture Recognition",
+                  "Ambient Intelligence"];
+      
+      contextArray = ["Privacy is important", "Not concerned about privacy", "Any Context", "Security is important",
+                      "Not concerned about security", 
+                      "Inclusive -  Accessible to a large number of people", 
+                      "Exclusive - Accessible to a small number of people",
+                      "Usable", "Any Context","Difficult to use", "Ethical", "Unethical"];
+
+        
+      mediaArray = ["Transmedia storytelling", "Advertising", "Politics", "Media production",
+                    "Gaming", "News", "Entertainment", "Theatre", "Film", "Documentary",
+                    "Museums/Galleries", "Books", "Social media", "Streaming", "Internet or Apps",
+                    "Audio", "Cartography", "Virtual/Augmented Reality"];
+    
+    </script>
+  </body>
+</html>

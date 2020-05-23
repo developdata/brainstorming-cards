@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pick a card</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100vw;
+        height: 100vh;
+/*         display: flex; */
+        justify-content: center;
+        align-items: center;
+      }
+      
+      header{
+/*         display: flex; */
+      }
+      
+      .cards{
+        display: flex;
+           flex-direction: row;
+         align-items: center;
+  justify-content: center;
+
+      }
+      
+      .flip-card-container {
+        width: 300px;
+        height: 400px;
+        margin: 10px;
+/*         perspective: 1000px; */
+      }
+      .flip-card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+      }
+/*       .flip-card-container:hover .flip-card {
+        transform: rotateY(180deg);  <=>  rotateY(.5turn) 
+      } */
+      /* Position the front and back side */
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+/*         display: flex; */
+        justify-content: center;
+        align-items: center;
+        /* border-radius: 0.5rem; */
+      }
+      .flip-card-front {
+        background-color: #333;
+        color: #fff;
+      }
+      .flip-card-back {
+        background-color: #517fa4;
+        color: #fff;
+        transform: rotateY(180deg);
+      }
+
+      .flip-card-back p {
+        text-align: center;
+        margin: 1rem;
+        font-size: 1.4rem;
+        line-height: 1.5rem;
+      }
+      .flip-card-back p span {
+        display: block;
+        font-size: 1rem;
+        font-style: italic;
+        font-weight: bold;
+        margin-top: 1.25rem;
+      }
+
+    </style>
+  </head>  
+  <body>
+    <header>
+      Hello
+    
+    </header>
+    <div class = "cards">
+   <div class="flip-card-container">
+        <div id="flip1" class="flip-card">
+          <div class="flip-card-front">
+          </div>
+          <div class="flip-card-back">
+            <p id="inner-text">
+              "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe."
+            </p>
+          </div>
+        </div>
+      </div>
+    
+         <div class="flip-card-container">
+        <div id="flip2" class="flip-card">
+          <div class="flip-card-front">
+          </div>
+          <div class="flip-card-back">
+            <p id="inner-text2">
+              "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe."
+            </p>
+          </div>
+        </div>
+      </div>   
+    </div>
+     
+    <script>
+      
+      var toggle1 = 0;
+      var toggle2 = 0;
+      
+      var quoteArray = ["one", "two", "three", "four", "five"];
+      
+      var flips = document.getElementById('flip1');
+      var paragraphText1 = document.getElementById('inner-text');
+      
+      var flips2 = document.getElementById('flip2');
+      var paragraphText2 = document.getElementById('inner-text2');
+
+      flips.addEventListener( 'click', function( event ) {
+        toggle1 = toggle(toggle1, this, paragraphText1);
+
+      });
+      
+      flips2.addEventListener( 'click', function( event ) {
+        toggle2 = toggle(toggle2, this, paragraphText2);
+        // if (toggle2 === 0){
+        //   const randomQuote = quoteArray[Math.floor(Math.random() * quoteArray.length)];
+        //   this.style.transform = 'rotateY(180deg)';
+        //   paragraphText2.innerHTML = randomQuote;
+        //   toggle2 = 1;
+        // } else {
+        //   this.style.transform = 'rotateY(0deg)';
+        //   toggle2 = 0;
+        // }
+        
+      });
+      
+      function toggle(toggleCounter, element, paragraphText){
+        
+        if (toggleCounter === 0){
+          
+          const randomQuote = quoteArray[Math.floor(Math.random() * quoteArray.length)];
+          element.style.transform = 'rotateY(180deg)';
+          paragraphText.innerHTML = randomQuote;
+          toggleCounter = 1;
+        } else {
+          element.style.transform = 'rotateY(0deg)';
+          toggleCounter = 0;
+        }
+        return(toggleCounter);
+      }
+
+    
+    </script>
+  </body>
+</html>
